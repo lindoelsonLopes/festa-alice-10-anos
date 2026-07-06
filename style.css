@@ -526,6 +526,35 @@ ul.guest-list li:last-child{ border-bottom:none; }
 }
 
 /* =========================================================
+   RODAPÉ
+   ========================================================= */
+.site-footer{
+  text-align:center;
+  margin-top:48px;
+  padding-top:24px;
+  border-top:1px solid rgba(255,255,255,0.08);
+  color:var(--text-muted);
+  font-family:'Space Grotesk', sans-serif;
+  font-size:0.9rem;
+}
+
+.site-footer .heart{
+  display:inline-block;
+  color:var(--neon-pink);
+  text-shadow:0 0 8px var(--neon-pink), 0 0 16px var(--neon-pink);
+  animation:heart-beat 1.6s ease-in-out infinite;
+}
+
+@keyframes heart-beat{
+  0%, 100%{ transform:scale(1); }
+  25%{ transform:scale(1.25); }
+  40%{ transform:scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .site-footer .heart{ animation:none; }
+}
+/* =========================================================
    RESPONSIVO
    ========================================================= */
 @media(max-width:900px){
