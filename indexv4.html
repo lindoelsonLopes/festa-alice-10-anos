@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice · 10 anos</title>
+
+    <!-- Preview ao compartilhar o link (WhatsApp, etc). Depois de publicar o site,
+         troque "https://SEU-LINK-AQUI" pelo link real, e coloque uma imagem
+         chamada preview.png na raiz do site (pode usar a mesma gerada em
+         convite-gerador.html, só renomeie pra preview.png). -->
+    <meta property="og:title" content="Alice · Festa de 10 anos" />
+    <meta property="og:description" content="Confirme presença, veja as fotos e a contagem regressiva pra festa da Alice!" />
+    <meta property="og:image" content="https://SEU-LINK-AQUI/preview.png" />
+    <meta property="og:url" content="https://SEU-LINK-AQUI" />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="stylev3.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Fundo: grade synthwave + orbs neon com parallax -->
+    <div class="bg-fx" aria-hidden="true">
+        <div class="horizon-glow"></div>
+        <div class="grid-floor"></div>
+        <div id="orbField"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="neon-sign">ALICE <span class="sign-10">10</span></div>
+            <p class="lead">Uma festa em neon pra celebrar os 10 anos da Alice! Confira a contagem regressiva, role a tela pra viver as fotos em tela cheia e confirme sua presença.</p>
+        </header>
+
+        <div class="card reveal">
+            <h2>Contagem regressiva</h2>
+            <div id="countdown" class="countdown" aria-live="polite">
+                <div class="unit"><div class="value" id="days">--</div><div class="label">Dias</div></div>
+                <div class="unit"><div class="value" id="hours">--</div><div class="label">Horas</div></div>
+                <div class="unit"><div class="value" id="minutes">--</div><div class="label">Minutos</div></div>
+                <div class="unit"><div class="value" id="seconds">--</div><div class="label">Segundos</div></div>
+            </div>
+            <p class="muted" style="text-align:center;margin-top:14px">Data e horário do evento: <strong id="eventDatePretty">--</strong></p>
+        </div>
+
+        <p class="scroll-hint muted">↓ role a tela pra ver os momentos especiais ↓</p>
+    </div>
+
+    <!-- Galeria cinematográfica: foto + storytelling lado a lado, substituídos ao rolar -->
+    <section class="cinema-gallery" id="gallery" aria-label="Galeria de fotos da Alice">
+        <div class="photo-stage">
+            <div class="stage-media"><img src="Image/Alice01.jpeg" data-full="Image/Alice01.jpeg" alt="Foto 1 da Alice"></div>
+            <div class="stage-story">
+                <span class="stage-count">01 / 06</span>
+                <h3 class="story-title">Sorriso de sempre</h3>
+                <p class="story-text">Alice tem esse jeitinho de encarar tudo com curiosidade — sempre pronta pra uma nova aventura ou descoberta. (Texto de exemplo — me conta a história dessa foto que eu escrevo certinho!)</p>
+            </div>
+        </div>
+        <div class="photo-stage">
+            <div class="stage-media"><img src="Image/Alice02.jpeg" data-full="Image/Alice02.jpeg" alt="Foto 2 da Alice"></div>
+            <div class="stage-story">
+                <span class="stage-count">02 / 06</span>
+                <h3 class="story-title">Pequena artista</h3>
+                <p class="story-text">Adora desenhar, inventar histórias e colorir cada cantinho do dia com criatividade. (Texto de exemplo — substitua pela história real dessa foto.)</p>
+            </div>
+        </div>
+        <div class="photo-stage">
+            <div class="stage-media"><img src="Image/Alice03.jpeg" data-full="Image/Alice03.jpeg" alt="Foto 3 da Alice"></div>
+            <div class="stage-story">
+                <span class="stage-count">03 / 06</span>
+                <h3 class="story-title">Aventureira</h3>
+                <p class="story-text">Não tem medo de experimentar coisas novas — de brincadeira em brincadeira, sempre em movimento. (Texto de exemplo.)</p>
+            </div>
+        </div>
+        <div class="photo-stage">
+            <div class="stage-media"><img src="Image/Alice04.jpeg" data-full="Image/Alice04.jpeg" alt="Foto 4 da Alice"></div>
+            <div class="stage-story">
+                <span class="stage-count">04 / 06</span>
+                <h3 class="story-title">Coração generoso</h3>
+                <p class="story-text">Sempre com uma palavra gentil e um abraço pra quem precisa. (Texto de exemplo — troque pela história de verdade.)</p>
+            </div>
+        </div>
+        <div class="photo-stage">
+            <div class="stage-media"><img src="Image/Alice05.jpeg" data-full="Image/Alice05.jpeg" alt="Foto 5 da Alice"></div>
+            <div class="stage-story">
+                <span class="stage-count">05 / 06</span>
+                <h3 class="story-title">Melhor amiga</h3>
+                <p class="story-text">Adora reunir a família e os amigos pra rir e brincar até não poder mais. (Texto de exemplo.)</p>
+            </div>
+        </div>
+        <div class="photo-stage">
+            <div class="stage-media"><img src="Image/Alice06.jpeg" data-full="Image/Alice06.jpeg" alt="Foto 6 da Alice"></div>
+            <div class="stage-story">
+                <span class="stage-count">06 / 06</span>
+                <h3 class="story-title">Rumo aos 10!</h3>
+                <p class="story-text">Um ano novo de histórias, risadas e muitas surpresas por vir. (Texto de exemplo — pode personalizar à vontade.)</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <main>
+            <section>
+                <div class="card reveal">
+                    <h3>Informações do evento</h3>
+                    <div class="event">
+                        <div>
+                            <div class="when" id="whenText">Sábado, 22 de Agosto de 2026 — 18:00</div>
+                            <div class="muted">Local: Kid Recanto — R. Dr. Zuquim, 1786 - Santana, São Paulo - SP, 02035-022</div>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <h3>Como chegar</h3>
+                    <div class="map-embed">
+                        <iframe
+                            id="mapFrame"
+                            title="Mapa do local da festa"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+
+            <aside>
+                <div class="card reveal">
+                    <h3>Confirme sua presença</h3>
+                    <form id="rsvpForm">
+                        <div class="row">
+                            <input type="text" id="rsvpName" placeholder="Nome completo" required />
+                        </div>
+                        <div class="row">
+                            <input type="email" id="rsvpEmail" placeholder="E-mail (opcional)" />
+                        </div>
+                        <div class="row">
+                            <select id="rsvpAttending">
+                                <option value="yes">Sim, vou comparecer</option>
+                                <option value="no">Não vou conseguir</option>
+                                <option value="maybe">Ainda não sei</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <textarea id="rsvpMsg" rows="3" placeholder="Mensagem ou felicitações (opcional)"></textarea>
+                        </div>
+                        <div style="display:flex;gap:8px;flex-wrap:wrap">
+                            <button type="submit" id="rsvpSubmitBtn">Enviar confirmação</button>
+                        </div>
+                        <div class="rsvp-status" id="rsvpStatus"></div>
+                    </form>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <div id="modal" class="modal" aria-hidden="true">
+        <span class="close">&times;</span>
+        <img id="modalImg" alt="Imagem ampliada">
+    </div>
+
+    <script src="scriptv4.js"></script>
+</body>
+</html>
