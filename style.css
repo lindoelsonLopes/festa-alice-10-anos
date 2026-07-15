@@ -271,13 +271,9 @@ hr{
 }
 .photo-stage:nth-child(even){ flex-direction:row-reverse; }
 
-/* cada estágio empilha por cima do anterior conforme chega */
-.photo-stage:nth-child(1){ z-index:1; }
-.photo-stage:nth-child(2){ z-index:2; }
-.photo-stage:nth-child(3){ z-index:3; }
-.photo-stage:nth-child(4){ z-index:4; }
-.photo-stage:nth-child(5){ z-index:5; }
-.photo-stage:nth-child(6){ z-index:6; }
+/* cada estágio empilha por cima do anterior conforme chega — funciona
+   automaticamente pra qualquer quantidade de fotos, sem precisar listar
+   z-index um por um: elementos mais adiante no código cobrem os anteriores. */
 
 /* fundo do próprio estágio, pra cobrir o estágio anterior ao chegar */
 .photo-stage{ background:var(--void); }
