@@ -3,16 +3,16 @@
 /* =========================================================
    CONFIGURAÇÃO DO EVENTO
    ========================================================= */
-const EVENT_ISO = '2026-08-22T13:00:00-03:00'; // horário de Brasília, fixo pra qualquer convidado
-const EVENT_LABEL = 'Sábado, 22 de Agosto de 2026 — 13:00';
-const EVENT_LOCATION = 'Kid Recanto — Rua Exemplo, 123';
+const EVENT_ISO = '2026-08-22T18:00:00-03:00'; // horário de Brasília, fixo pra qualquer convidado
+const EVENT_LABEL = 'Sábado, 22 de Agosto de 2026 — 18:00';
+const EVENT_LOCATION = 'Kid Recanto Buffet - Santana, R. Dr. Zuquim, 1786 - Santana, São Paulo - SP, 02035-022';
 
 /* =========================================================
    CONFIGURAÇÃO DO BACKEND (Google Sheets via Apps Script)
    Troque a URL abaixo pela URL do seu Web App depois de
    publicar o Apps Script (veja SETUP.md para o passo a passo).
    ========================================================= */
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwAU54_E55xNHdklIeqED4bnTH71XrkS3RXQI7_33Q73OrpdLVa2eHdJpw8ixuYbB1K/exec';
+const APPS_SCRIPT_URL = 'COLE_AQUI_A_URL_DO_SEU_APPS_SCRIPT';
 
 const BACKEND_CONFIGURED = APPS_SCRIPT_URL && !APPS_SCRIPT_URL.startsWith('COLE_AQUI');
 
@@ -252,7 +252,7 @@ rsvpForm.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const name = document.getElementById('rsvpName').value.trim();
-  const email = document.getElementById('rsvpEmail').value.trim();
+  const companion = document.getElementById('rsvpCompanion').value.trim();
   const attending = document.getElementById('rsvpAttending').value;
   const note = document.getElementById('rsvpMsg').value.trim();
 
@@ -261,7 +261,7 @@ rsvpForm.addEventListener('submit', async (e) => {
     return;
   }
 
-  const guest = { name, email, attending, note, when: nowInBrasilia() };
+  const guest = { name, companion, attending, note, when: nowInBrasilia() };
 
   rsvpSubmitBtn.disabled = true;
   setStatus('Enviando confirmação...', '');
