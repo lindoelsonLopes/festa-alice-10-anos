@@ -12,7 +12,7 @@ const EVENT_LOCATION = 'Kid Recanto Buffet - Santana, R. Dr. Zuquim, 1786 - Sant
    Troque a URL abaixo pela URL do seu Web App depois de
    publicar o Apps Script (veja SETUP.md para o passo a passo).
    ========================================================= */
-const APPS_SCRIPT_URL = 'COLE_AQUI_A_URL_DO_SEU_APPS_SCRIPT';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwAU54_E55xNHdklIeqED4bnTH71XrkS3RXQI7_33Q73OrpdLVa2eHdJpw8ixuYbB1K/exec';
 
 const BACKEND_CONFIGURED = APPS_SCRIPT_URL && !APPS_SCRIPT_URL.startsWith('COLE_AQUI');
 
