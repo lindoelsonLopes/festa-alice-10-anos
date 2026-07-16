@@ -3,8 +3,8 @@
 /* =========================================================
    CONFIGURAÇÃO DO EVENTO
    ========================================================= */
-const EVENT_ISO = '2026-08-22T18:00:00-03:00'; // horário de Brasília, fixo pra qualquer convidado
-const EVENT_LABEL = 'Sábado, 22 de Agosto de 2026 — 18:00';
+const EVENT_ISO = '2026-08-22T13:00:00-03:00'; // horário de Brasília, fixo pra qualquer convidado
+const EVENT_LABEL = 'Sábado, 22 de Agosto de 2026 — 13:00';
 const EVENT_LOCATION = 'Kid Recanto Buffet - Santana, R. Dr. Zuquim, 1786 - Santana, São Paulo - SP, 02035-022';
 
 /* =========================================================
